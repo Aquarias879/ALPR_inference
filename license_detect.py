@@ -15,14 +15,6 @@ class ObjectDetector:
 
     def __call__(self, image):
         return self.detect_objects(image)
-
-    '''
-    def initialize_model(self, onnx_model_path):
-        try:
-            self.session = ort.InferenceSession(onnx_model_path, providers=ort.get_available_providers())
-            self.get_input_output_details()
-        except Exception as e:
-            raise RuntimeError(f"Error initializing the model: {e}")'''
     
     def initialize_model(self, onnx_model_path):
         try:
